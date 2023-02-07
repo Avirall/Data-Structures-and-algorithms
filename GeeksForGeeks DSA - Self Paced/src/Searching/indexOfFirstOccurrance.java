@@ -2,7 +2,7 @@ package Searching;
 
 import java.util.Scanner;
 
-public class BinarySearch{
+public class indexOfFirstOccurrance {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number elements");
@@ -15,7 +15,7 @@ public class BinarySearch{
         System.out.println("Enter the element you want to search for: ");
         int element=sc.nextInt();
         sc.close();
-        int pos=BinaryS(element,arr,0,n-1);
+        int pos=binaryS(element,arr,0,n-1);
         if(pos!=-1){
             System.out.println("Element found at index: "+pos);
         }
@@ -23,19 +23,27 @@ public class BinarySearch{
             System.out.println("Element not found");
         }
     }
-    public static int BinaryS(int element,int[] arr, int left, int right){
+    public static int binaryS(int element,int[] arr, int left, int right){
         int mid=(left+right)/2;
+        if(arr[0]==element){
+            return 0;
+        }
         if(arr[mid]==element){
-            return mid;
+            if(arr[mid-1]!=element){
+                return mid;    
+            }
+            else{
+                return binaryS(element,arr,left,mid-1);   
+            }
         }
         if(left>right){
             return -1;
         }
         if(arr[mid]>element){
-            return BinaryS(element,arr,left,mid-1);
+            return binaryS(element,arr,left,mid-1);
         }
         else{
-            return BinaryS(element,arr,mid+1,right);
+            return binaryS(element,arr,mid+1,right);
         }
     }
 }

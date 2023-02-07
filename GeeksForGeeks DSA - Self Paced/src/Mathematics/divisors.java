@@ -7,6 +7,7 @@ public class divisors {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number n:");
         int n = sc.nextInt();
+        sc.close();
         for(int i=1;i*i<=n;i++){
             if(n%i==0)
             System.out.print(i+" ");

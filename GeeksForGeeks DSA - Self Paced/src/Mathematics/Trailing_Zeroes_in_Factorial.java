@@ -7,6 +7,7 @@ public class Trailing_Zeroes_in_Factorial {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number:");
         int n = sc.nextInt();
+        sc.close();
         int temp=factors(n);
         int count=0;
         while(temp%10==0){

@@ -7,6 +7,7 @@ public class Count_Digits {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number:");
         int n = sc.nextInt();
+        sc.close();
         System.out.println("The Number of digits are: ");
         int count=0;
         while(n>0){

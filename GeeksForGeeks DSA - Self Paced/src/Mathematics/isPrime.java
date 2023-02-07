@@ -7,6 +7,7 @@ public class isPrime {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number:");
         int n = sc.nextInt();
+        sc.close();
         Boolean Prime=true;
         if(n%2==0 || n%3==0){
             Prime=false;

@@ -7,6 +7,7 @@ public class factorial {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number:");
         int n = sc.nextInt();
+        sc.close();
         System.out.println(Factorial(n));
     }
     public static int Factorial(int n) {

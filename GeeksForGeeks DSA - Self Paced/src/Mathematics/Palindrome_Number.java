@@ -7,6 +7,7 @@ public class Palindrome_Number {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number:");
         int n = sc.nextInt();
+        sc.close();
         System.out.println(palindrome(n));
     }
     public static boolean palindrome(int n){

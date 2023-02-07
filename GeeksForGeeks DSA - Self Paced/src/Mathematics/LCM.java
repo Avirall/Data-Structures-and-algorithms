@@ -9,6 +9,7 @@ public class LCM {
         int a = sc.nextInt();
         System.out.println("Enter the number b:");
         int b= sc.nextInt();
+        sc.close();
         int lcm= (a*b)/GCD(a,b);
         System.out.println("The lcm of "+a+" and "+b+" is "+lcm);
     }

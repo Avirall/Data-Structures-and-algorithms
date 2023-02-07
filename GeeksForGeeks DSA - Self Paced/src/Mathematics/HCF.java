@@ -9,6 +9,7 @@ public class HCF {
         int a = sc.nextInt();
         System.out.println("Enter the number b:");
         int b= sc.nextInt();
+        sc.close();
         System.out.println("The HCF of "+a+" and "+b+" is "+GCD(a,b));
     }
     public static int GCD(int a, int b){

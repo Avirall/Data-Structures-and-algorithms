@@ -7,7 +7,7 @@ public class josephusProblem {
     }
     public static int kill(int n, int k){
 
-        int curr=0;
+        //int curr=0;
         if(n==1){
             return 0;
         }
